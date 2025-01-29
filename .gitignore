@@ -23,3 +23,18 @@
 hs_err_pid*
 replay_pid*
 /PruebaGit/
+
+# Ignorar archivos binarios y compilados
+bin/
+target/
+*.class
+
+# Ignorar archivos de configuración específicos de Eclipse
+.classpath
+.project
+.settings/
+
+# Ignorar archivos de sistema
+.DS_Store
+Thumbs.db
+
