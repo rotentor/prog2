@@ -9,39 +9,47 @@ public class Tienda {
 	// saldoInicial >= 0
 	public Tienda(double saldoInicial, Almacen almacen1,
 			Almacen almacen2) {
-		//TO-DO
+		this.saldoCaja = saldoInicial;
+		this.precios = new double[almacen1.size()];
+		this.almacen1 = new Almacen(almacen1);
+		this.almacen2 = new Almacen(almacen2);
 	}
 	
 	//PRE: 0 <= codProducto < precios.length y precio > 0
 	public void setPrecio(int codProducto, double precio) {
-		//TO-DO
+		precios[codProducto] = precio;
 	}
 	
 	//PRE: 0 <= codProducto < precios.length y 
 	// hay existencias del producto codProducto
 	// preferimos utilizar el almacen mas cercano
 	public void comprar(int codProducto) {
-		//TO-DO
+		if (almacen1.get(codProducto) > 0) almacen1.gastarProductos(codProducto, 1);
+		else almacen2.gastarProductos(codProducto, 1);
+		saldoCaja += precios[codProducto];
 	}
 	
 	//PRE: 0 <= codProducto < precios.length
 	public void devolver(int codProducto) {
-		//TO-DO
+		almacen1.recibirProductos(codProducto, 1);
+		saldoCaja -= precios[codProducto];
 	}
 	
 	//PRE: 0 <= codProducto < precios.length
 	public boolean quedaProducto(int codProducto){
-		//TO-DO
-		return false;
-	}
+        return almacen1.get(codProducto)>0 || almacen2.get(codProducto)>0;
+    }
 	
 	public int numProdAgotados() {
-		//TO-DO
-		return 0;
+		int count = 0;
+		for (int prod=0; prod<precios.length; prod++) {
+			if (almacen1.get(prod)<1 && almacen2.get(prod)<1) count++;
+		}
+		return count;
 	}
 	
 	public String toString() {
 		//TO-DO		
-		return "";		
+		return "Soy una tienda con " + saldoCaja + "€";
 	}
 }

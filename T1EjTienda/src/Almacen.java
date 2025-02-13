@@ -3,7 +3,11 @@ public class Almacen {
 	// en la pos i se guarda el no. de existencias
 	// del producto con codigo i
 	private int[] existenciasProductos;
-	
+
+	public Almacen(Almacen a) {
+		existenciasProductos = a.existenciasProductos;
+	}
+
 	public Almacen(int[] existenciasProductos) {
 		this.existenciasProductos = existenciasProductos;
 	}
