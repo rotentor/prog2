@@ -34,6 +34,10 @@ target/
 .project
 .settings/
 
+# Ignorar archivos de configuración específicos de IntelliJ
+.idea/
+*.iml
+
 # Ignorar archivos de sistema
 .DS_Store
 Thumbs.db
