@@ -4,8 +4,16 @@ public class TestCuenta {
 		// el atributo static existe antes de crear el primer objeto
 		System.out.println(Cuenta.getGastosApertura()); // sale 10 
 		Cuenta cuenta1, cuenta2;
-		cuenta1 = new Cuenta(23);
-		cuenta2 = new Cuenta(40);
+		Persona cliente1 = new Persona("532147X", 20, "Pepe");
+		Persona cliente2 = new Persona("732247X", 30, "Ana");
+		
+		cuenta1 = new Cuenta(23, cliente1);
+		cuenta2 = new Cuenta(40, cliente2);
+		
+		System.out.println(cuenta1.esIgual(cuenta2)); // FALSE
+		System.out.println(cuenta1.esIgual(new Cuenta(cuenta1))); // TRUE
+
+		
 		System.out.println(cuenta1);
 
 		Cuenta.setGastosApertura(1.5);
