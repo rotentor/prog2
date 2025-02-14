@@ -10,11 +10,15 @@ public class Tienda {
 	public Tienda(double saldoInicial, Almacen almacen1,
 			Almacen almacen2) {
 		//TO-DO
+		this.saldoCaja = saldoInicial;
+		this.precios = new double[almacen1.size()];
+		this.almacen1 = almacen1;
+		this.almacen2 = almacen2;
 	}
 	
 	//PRE: 0 <= codProducto < precios.length y precio > 0
 	public void setPrecio(int codProducto, double precio) {
-		//TO-DO
+			precios[codProducto]=precio;
 	}
 	
 	//PRE: 0 <= codProducto < precios.length y 
