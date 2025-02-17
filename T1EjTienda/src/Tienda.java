@@ -4,7 +4,7 @@ public class Tienda {
 	private double saldoCaja;
 	// en pos i esta el precio del producto con codigo i
 	private double[] precios;
-	
+
 	//PRE: almacen1.size() = almacen2.size() y
 	// saldoInicial >= 0
 	public Tienda(double saldoInicial, Almacen almacen1,
@@ -15,37 +15,54 @@ public class Tienda {
 		this.almacen1 = almacen1;
 		this.almacen2 = almacen2;
 	}
-	
+
 	//PRE: 0 <= codProducto < precios.length y precio > 0
 	public void setPrecio(int codProducto, double precio) {
-			precios[codProducto]=precio;
+		precios[codProducto]=precio;
 	}
-	
+
 	//PRE: 0 <= codProducto < precios.length y 
 	// hay existencias del producto codProducto
 	// preferimos utilizar el almacen mas cercano
 	public void comprar(int codProducto) {
-		//TO-DO
+		if(almacen1.get(codProducto)!=0){
+			almacen1.gastarProductos(codProducto, 1);
+		}	else {
+			almacen2.gastarProductos(codProducto, 1);
+		}
+		saldoCaja+=precios[codProducto];
 	}
-	
+
 	//PRE: 0 <= codProducto < precios.length
 	public void devolver(int codProducto) {
-		//TO-DO
+		almacen1.recibirProductos(codProducto, 1);
+		saldoCaja -= precios[codProducto];
 	}
-	
+
 	//PRE: 0 <= codProducto < precios.length
 	public boolean quedaProducto(int codProducto){
 		//TO-DO
-		return false;
+		return almacen1.get(codProducto)>0 ||
+				almacen2.get(codProducto)>0;
 	}
-	
+
 	public int numProdAgotados() {
-		//TO-DO
-		return 0;
+		int num=0;
+		for(int i=0; i<almacen1.size() ;++i){
+			if(almacen1.get(i)==0 && almacen2.get(i)==0) {
+				++num;
+			}
+		}
+		return num;
 	}
-	
+
 	public String toString() {
-		//TO-DO		
-		return "";		
+		String resultado = "almacen1: " + almacen1 + 
+				" | almacen2: " + almacen2 + " | saldocaja: " 
+				+ saldoCaja + " | precios: ";
+		for(int i = 0;i<precios.length-1;i++) {
+			resultado += precios[i] +  " , " ; 
+		}
+		return resultado + precios[precios.length-1];		
 	}
 }
