@@ -13,6 +13,11 @@ public class Tienda {
 		this.precios = new double[almacen1.size()];
 		this.almacen1 = new Almacen(almacen1);
 		this.almacen2 = new Almacen(almacen2);
+		//TO-DO
+		this.saldoCaja = saldoInicial;
+		this.precios = new double[almacen1.size()];
+		this.almacen1 = almacen1;
+		this.almacen2 = almacen2;
 	}
 	
 	//PRE: 0 <= codProducto < precios.length y precio > 0
