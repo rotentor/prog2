@@ -2,7 +2,7 @@
 public class Tienda {
 	private Almacen almacen1, almacen2;
 	private double saldoCaja;
-	// en pos i esta el precio del producto con codigo i
+	// en pos i está el precio del producto con codigo i
 	private double[] precios;
 
 	//PRE: almacen1.size() = almacen2.size() y
