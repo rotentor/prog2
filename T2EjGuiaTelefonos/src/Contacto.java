@@ -1,4 +1,4 @@
-// Contacto simple (nombre, teléfono)
+// Contacto simple (nombre, telÃ©fono)
 public class Contacto {
     private String nombre;
     private long numero;
@@ -17,7 +17,7 @@ public class Contacto {
         return numero;
     }
 
-    // Comparación
+    // ComparaciÃ³n
     public boolean esIgual(Contacto otro) {
         return this.nombre.equals(otro.nombre) &&
                this.numero == otro.numero;

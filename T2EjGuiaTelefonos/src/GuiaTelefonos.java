@@ -1,5 +1,5 @@
-// Colección de contactos, asumiendo que no
-// se repiten nombres ni números de teléfono
+// ColecciÃ³n de contactos, asumiendo que no
+// se repiten nombres ni nÃºmeros de telÃ©fono
 public class GuiaTelefonos {
 	private Contacto[] guia;
 	private int numContactos;
@@ -10,7 +10,7 @@ public class GuiaTelefonos {
 		numContactos = 0;
 	}
 
-	// Añadir contacto
+	// AÃ±adir contacto
 	public void poner(Contacto contacto) {
 		if (numContactos < guia.length) {     // hay sitio
 			guia[numContactos] = contacto;    // ponerlo al final
@@ -22,11 +22,11 @@ public class GuiaTelefonos {
 	public void quitar(Contacto contacto) {
 		int pos = -1;
 		for (int k = 0; k < numContactos && pos < 0; k++) {  // buscarlo
-			if (guia[k].esIgual(contacto)) pos = k;   // está ahí
+			if (guia[k].esIgual(contacto)) pos = k;   // estÃ¡ ahÃ­
 		}
 		if (pos >= 0) {                // se ha encontrado
 			numContactos--;
-			if (pos < numContactos) {  // no era el último
+			if (pos < numContactos) {  // no era el Ãºltimo
 				guia[pos] = guia[numContactos];  // rellenar el hueco
 			}
 		}
@@ -36,12 +36,12 @@ public class GuiaTelefonos {
 	public String toString() {
 		String texto = "";
 		for (int k = 0; k < numContactos; k++) {  // procesar todos
-			texto = texto + guia[k] + "\n";       // un contacto por línea
+			texto = texto + guia[k] + "\n";       // un contacto por lÃ­nea
 		}
 		return texto;
 	}
 
-	// Búsquedas
+	// BÃºsquedas
 	public Contacto buscarNombre(String nombre) {
 		Contacto con = null;
 		for (int k = 0; k < numContactos && con == null; k++) {
