@@ -1,5 +1,5 @@
-// ColecciÃ³n de contactos, asumiendo que no
-// se repiten nombres ni nÃºmeros de telÃ©fono
+// Colección de contactos, asumiendo que no
+// se repiten nombres ni números de teléfono
 public class GuiaTelefonos {
 	private Contacto[] guia;
 	private int numContactos;
@@ -10,7 +10,7 @@ public class GuiaTelefonos {
 		numContactos = 0;
 	}
 
-	// AÃ±adir contacto
+	// Añadir contacto
 	public void poner(Contacto contacto) {
 		if (numContactos < guia.length) {     // hay sitio
 			guia[numContactos] = contacto;    // ponerlo al final
@@ -22,11 +22,11 @@ public class GuiaTelefonos {
 	public void quitar(Contacto contacto) {
 		int pos = -1;
 		for (int k = 0; k < numContactos && pos < 0; k++) {  // buscarlo
-			if (guia[k].esIgual(contacto)) pos = k;   // estÃ¡ ahÃ­
+			if (guia[k].esIgual(contacto)) pos = k;   // está ahí
 		}
 		if (pos >= 0) {                // se ha encontrado
 			numContactos--;
-			if (pos < numContactos) {  // no era el Ãºltimo
+			if (pos < numContactos) {  // no era el último
 				guia[pos] = guia[numContactos];  // rellenar el hueco
 			}
 		}
@@ -36,12 +36,12 @@ public class GuiaTelefonos {
 	public String toString() {
 		String texto = "";
 		for (int k = 0; k < numContactos; k++) {  // procesar todos
-			texto = texto + guia[k] + "\n";       // un contacto por lÃ­nea
+			texto = texto + guia[k] + "\n";       // un contacto por línea
 		}
 		return texto;
 	}
 
-	// BÃºsquedas
+	// Búsquedas
 	public Contacto buscarNombre(String nombre) {
 		Contacto con = null;
 		for (int k = 0; k < numContactos && con == null; k++) {
@@ -56,6 +56,18 @@ public class GuiaTelefonos {
 			if (guia[k].igualNumero(numero)) con = guia[k];
 		}
 		return con;
+	}
+	
+	public int contarTelefonosMadrid() {
+		int res=0;
+		for(int i=0;i<numContactos;i++) {
+			if(guia[i].contieneTtlfoMadrid())
+				res++;
+		}
+		return res;
+		
+		
+		
 	}
 
 }

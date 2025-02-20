@@ -1,4 +1,4 @@
-// Contacto simple (nombre, telÃ©fono)
+// Contacto simple (nombre, teléfono)
 public class Contacto {
     private String nombre;
     private long numero;
@@ -17,7 +17,7 @@ public class Contacto {
         return numero;
     }
 
-    // ComparaciÃ³n
+    // Comparación
     public boolean esIgual(Contacto otro) {
         return this.nombre.equals(otro.nombre) &&
                this.numero == otro.numero;
@@ -32,6 +32,11 @@ public class Contacto {
     // Presentar con formato
     public String toString() {
         return nombre + ": " + numero;
+    }
+    
+    public boolean contieneTtlfoMadrid() {
+    	String telefono = Long.toString(numero);
+    	return telefono.startsWith("91") || telefono.startsWith("3491");    	
     }
     
 }
