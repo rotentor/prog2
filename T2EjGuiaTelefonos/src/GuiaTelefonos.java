@@ -65,9 +65,25 @@ public class GuiaTelefonos {
 				res++;
 		}
 		return res;
-		
-		
-		
+	}
+	
+	public void reemplazar(String nombre, long numero) {		
+		Contacto contacto = this.buscarNombre(nombre);		
+		if (contacto != null)
+			contacto.setNumero(numero);		
+	}
+	
+	public Contacto[] getTelefonosMadrid() {
+		int numTlfosMadrid = contarTelefonosMadrid();
+		Contacto[] guiaMadrid=new Contacto[numTlfosMadrid];
+		int cont=0;
+		for(int k=0;cont < numTlfosMadrid;k++) {
+			if(guia[k].contieneTtlfoMadrid()) {
+				guiaMadrid[cont]=guia[k];
+				cont++;
+			}
+		}
+		return guiaMadrid;
 	}
 
 }

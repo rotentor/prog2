@@ -39,4 +39,8 @@ public class Contacto {
     	return telefono.startsWith("91") || telefono.startsWith("3491");    	
     }
     
+    public void setNumero(long numero) {
+    	this.numero = numero;
+    }
+    
 }
