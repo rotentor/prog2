@@ -1,11 +1,11 @@
 // Colección de contactos, asumiendo que no
 // se repiten nombres ni números de teléfono
-public class GuiaTelefonos {
+public class GuiaTelefonosOrd {
 	private Contacto[] guia;
 	private int numContactos;
 
 	// Constructor
-	public GuiaTelefonos(int capacidad) {
+	public GuiaTelefonosOrd(int capacidad) {
 		guia = new Contacto[capacidad];
 		numContactos = 0;
 	}
@@ -13,7 +13,15 @@ public class GuiaTelefonos {
 	// Añadir contacto
 	public void poner(Contacto contacto) {
 		if (numContactos < guia.length) {     // hay sitio
-			guia[numContactos] = contacto;    // ponerlo al final
+			String nombre = contacto.getNombre();
+			int i;
+			for(i=numContactos-1; 
+					i >=0 && 
+							guia[i].getNombre().compareTo(nombre) > 0 
+							; i--) {
+				guia[i+1] = guia[i];
+			}
+			guia[i+1] = contacto;
 			numContactos++;
 		}
 	}
@@ -41,6 +49,35 @@ public class GuiaTelefonos {
 		return texto;
 	}
 
+	
+	private int buscarPos(String nombre) {
+		int primero = 0;
+		int ultimo = numContactos - 1;
+		while (primero < ultimo) {
+			int centro = (primero + ultimo)/2;
+			String nombreC = guia[centro].getNombre();
+			int comp = nombreC.compareTo(nombre);
+			if (comp > 0) { 
+				ultimo = centro - 1;
+			} else if (comp < 0) {
+				primero = centro + 1;
+			} else {
+				primero = ultimo = centro;
+			}			
+		}
+		
+		return (((primero==ultimo && 
+				guia[primero].getNombre().equals(nombre))) ? primero : -1);
+				
+		/*if ((primero==ultimo) && 
+				(guia[primero].getNombre().equals(nombre)))
+			return primero;
+		else
+			return -1;*/
+		
+		
+	}
+	
 	// Búsquedas
 	public Contacto buscarNombre(String nombre) {
 		Contacto con = null;
