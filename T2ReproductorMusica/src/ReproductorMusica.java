@@ -10,7 +10,9 @@ public class ReproductorMusica {
 	private int punteroReproduccion; 
 
 	public ReproductorMusica(int capacidad){
-		
+		listaReproduccion = new Cancion[capacidad];
+		noCanciones = 0;
+		punteroReproduccion = -1;
 	}
 
 	public String toString(){	
