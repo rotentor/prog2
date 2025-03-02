@@ -28,15 +28,11 @@ public class GuiaTelefonosOrd {
 
 	// Eliminar contacto
 	public void quitar(Contacto contacto) {
-		int pos = -1;
-		for (int k = 0; k < numContactos && pos < 0; k++) {  // buscarlo
-			if (guia[k].esIgual(contacto)) pos = k;   // está ahí
-		}
-		if (pos >= 0) {                // se ha encontrado
+		int pos = buscarPos(contacto.getNombre());
+		if (pos >= 0) {
+			for(int i=pos+1; i<numContactos; i++)
+				guia[i-1] = guia[i];
 			numContactos--;
-			if (pos < numContactos) {  // no era el último
-				guia[pos] = guia[numContactos];  // rellenar el hueco
-			}
 		}
 	}
 
@@ -80,11 +76,8 @@ public class GuiaTelefonosOrd {
 	
 	// Búsquedas
 	public Contacto buscarNombre(String nombre) {
-		Contacto con = null;
-		for (int k = 0; k < numContactos && con == null; k++) {
-			if (guia[k].igualNombre(nombre)) con = guia[k];
-		}
-		return con;
+		int pos = buscarPos(nombre);
+		return (pos == -1? null : guia[pos]);
 	}
 	
 	public Contacto buscarNumero(long numero) {
