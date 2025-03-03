@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="493a83b8-d4d1-4681-9064-f6eabb7200d7" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JUnit4 Test Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2to3GxxmQPLOSxT1lppWaUCvGzZ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "JUnit.AlmacenTest.executor": "Run",
+    "JUnit.AlmacenTest.recibirProductos.executor": "Run",
+    "JUnit.AlmacenTest.testToString.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit4",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4": "",
+    "create.test.in.the.same.root": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "/Users/raulmartinezortega/Library/CloudStorage/OneDrive-Personal/UPM/UPM/Programación II/prog2/T3EjAlmacenJUnit",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "settings.sync",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/src/tienda" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="tienda" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="test" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.AlmacenTest">
+    <configuration name="AlmacenTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="T3EjAlmacenJUnit" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tienda.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tienda" />
+      <option name="MAIN_CLASS_NAME" value="tienda.AlmacenTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AlmacenTest.recibirProductos" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="T3EjAlmacenJUnit" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tienda.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tienda" />
+      <option name="MAIN_CLASS_NAME" value="tienda.AlmacenTest" />
+      <option name="METHOD_NAME" value="recibirProductos" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AlmacenTest.testToString" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="T3EjAlmacenJUnit" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tienda.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tienda" />
+      <option name="MAIN_CLASS_NAME" value="tienda.AlmacenTest" />
+      <option name="METHOD_NAME" value="testToString" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.AlmacenTest" />
+        <item itemvalue="JUnit.AlmacenTest.testToString" />
+        <item itemvalue="JUnit.AlmacenTest.recibirProductos" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-33fa658e685a-intellij.indexing.shared.core-IU-251.20015.29" />
+        <option value="bundled-js-predefined-d6986cc7102b-4027fba43365-JavaScript-IU-251.20015.29" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="493a83b8-d4d1-4681-9064-f6eabb7200d7" name="Changes" comment="" />
+      <created>1741004507367</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1741004507367</updated>
+      <workItem from="1741004508367" duration="1148000" />
+      <workItem from="1741005668160" duration="367000" />
+      <workItem from="1741006110802" duration="2145000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
