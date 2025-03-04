@@ -1,5 +1,6 @@
 package tienda;
 
+
 public class Tienda {
 	private Almacen almacen1, almacen2;
 	private double saldoCaja;
