@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="6db9b899-e41b-4b20-83ed-ac4d50f4fdbf" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2tuEz5KrMDQcLx2MeARu5gw3iiP" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "JUnit.All in CentroEspacialcodApoyo.executor": "Run",
+    "JUnit.TestCentroEspacial,testComprobarSatelites1 and 3 more.executor": "Run",
+    "JUnit.TestCentroEspacial.executor": "Run",
+    "JUnit.TestCentroEspacial.testComprobarSatelites1.executor": "Run",
+    "JUnit.TestCentroEspacial.testComprobarSatelites3.executor": "Debug",
+    "JUnit.TestCentroEspacial.testComprobarSatelites4.executor": "Debug",
+    "JUnit.TestCentroEspacial.testInformacionEstrellas.executor": "Debug",
+    "JUnit.TestEstrella.executor": "Run",
+    "JUnit.TestEstrella.testEquals2.executor": "Run",
+    "JUnit.TestSateliteArtificial,testGetIdentificador1 and 1 more.executor": "Run",
+    "JUnit.TestSateliteArtificial.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "editor.preferences.completion",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/test" />
+      <recent name="$PROJECT_DIR$/temp" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.All in CentroEspacialcodApoyo">
+    <configuration name="All in CentroEspacialcodApoyo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CentroEspacialcodApoyo" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestCentroEspacial,testComprobarSatelites1 and 3 more" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CentroEspacialcodApoyo" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestCentroEspacial" />
+      <option name="TEST_OBJECT" value="pattern" />
+      <patterns>
+        <pattern testClass="TestCentroEspacial,testComprobarSatelites1" />
+        <pattern testClass="TestCentroEspacial,testComprobarSatelites3" />
+        <pattern testClass="TestCentroEspacial,testComprobarSatelites4" />
+        <pattern testClass="TestCentroEspacial,testComprobarSatelites5" />
+      </patterns>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestEstrella" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CentroEspacialcodApoyo" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestEstrella" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestSateliteArtificial" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CentroEspacialcodApoyo" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestSateliteArtificial" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestSateliteArtificial,testGetIdentificador1 and 1 more" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CentroEspacialcodApoyo" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestSateliteArtificial" />
+      <option name="TEST_OBJECT" value="pattern" />
+      <patterns>
+        <pattern testClass="TestSateliteArtificial,testGetIdentificador1" />
+        <pattern testClass="TestSateliteArtificial,testGetIdentificador2" />
+      </patterns>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.All in CentroEspacialcodApoyo" />
+        <item itemvalue="JUnit.TestSateliteArtificial,testGetIdentificador1 and 1 more" />
+        <item itemvalue="JUnit.TestSateliteArtificial" />
+        <item itemvalue="JUnit.TestEstrella" />
+        <item itemvalue="JUnit.TestCentroEspacial,testComprobarSatelites1 and 3 more" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-33fa658e685a-intellij.indexing.shared.core-IU-251.20015.29" />
+        <option value="bundled-js-predefined-d6986cc7102b-4027fba43365-JavaScript-IU-251.20015.29" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6db9b899-e41b-4b20-83ed-ac4d50f4fdbf" name="Changes" comment="" />
+      <created>1741193818200</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1741193818200</updated>
+      <workItem from="1741193819183" duration="2620000" />
+      <workItem from="1741196450441" duration="1690000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/test/TestEstrella.java</url>
+          <line>54</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/vigilanciaespacial/CentroEspacial.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="JUnit">
+        <watch expression="satelitesSupervisados[j]" language="JAVA" />
+        <watch expression="satelitesSupervisados[k]" language="JAVA" />
+      </configuration>
+    </watches-manager>
+  </component>
+</project>
