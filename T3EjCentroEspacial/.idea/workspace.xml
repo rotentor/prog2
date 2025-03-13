@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6db9b899-e41b-4b20-83ed-ac4d50f4fdbf" name="Changes" comment="" />
+    <list default="true" id="6db9b899-e41b-4b20-83ed-ac4d50f4fdbf" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,6 +34,7 @@
   &quot;keyToString&quot;: {
     &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
     &quot;JUnit.All in CentroEspacialcodApoyo.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.All in T3EjCentroEspacial.executor&quot;: &quot;Run&quot;,
     &quot;JUnit.TestCentroEspacial,testComprobarSatelites1 and 3 more.executor&quot;: &quot;Run&quot;,
     &quot;JUnit.TestCentroEspacial.executor&quot;: &quot;Run&quot;,
     &quot;JUnit.TestCentroEspacial.testComprobarSatelites1.executor&quot;: &quot;Run&quot;,
@@ -71,7 +74,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.All in T3EjCentroEspacial">
+  <component name="RunManager" selected="JUnit.All in CentroEspacialcodApoyo">
     <configuration name="All in CentroEspacialcodApoyo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="T3EjCentroEspacial" />
       <option name="PACKAGE_NAME" value="" />
@@ -119,21 +122,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="T3EjCentroEspacial" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="T3EjCentroEspacial" />
-      <option name="filePath" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.All in T3EjCentroEspacial" />
         <item itemvalue="JUnit.All in CentroEspacialcodApoyo" />
+        <item itemvalue="JUnit.All in T3EjCentroEspacial" />
         <item itemvalue="JUnit.TestSateliteArtificial,testGetIdentificador1 and 1 more" />
         <item itemvalue="JUnit.TestSateliteArtificial" />
         <item itemvalue="JUnit.TestEstrella" />
@@ -162,6 +154,8 @@
       <workItem from="1741252256022" duration="49000" />
       <workItem from="1741252371693" duration="140000" />
       <workItem from="1741626412547" duration="227000" />
+      <workItem from="1741626653666" duration="1307000" />
+      <workItem from="1741859785734" duration="149000" />
     </task>
     <servers />
   </component>
@@ -178,7 +172,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/vigilanciaespacial/CentroEspacial.java</url>
-          <line>25</line>
+          <line>42</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
