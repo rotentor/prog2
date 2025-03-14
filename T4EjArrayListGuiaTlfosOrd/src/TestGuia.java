@@ -12,7 +12,7 @@ public class TestGuia {
     }
     
     public static void main(String[] args) {
-        GuiaTelefonosOrd g = new GuiaTelefonosOrd(10);
+        GuiaTelefonosOrd g = new GuiaTelefonosOrd();
         g.poner(new Contacto("Luis", 123456));
         g.poner(new Contacto("Carlos", 3491234567l)); // Madrid
         g.poner(new Contacto("Pedro", 91345678)); // Madrid
