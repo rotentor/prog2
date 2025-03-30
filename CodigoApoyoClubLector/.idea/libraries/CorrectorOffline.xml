@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="CorrectorOffline">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../libs/CorrectorOffline.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

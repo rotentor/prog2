@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="TADs1920">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../../libs/TADs1920" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="file://$PROJECT_DIR$/../../libs/TADs1920/doc" />
+    </JAVADOC>
+    <SOURCES />
+    <jarDirectory url="file://$PROJECT_DIR$/../../libs/TADs1920" recursive="false" />
+  </library>
+</component>
