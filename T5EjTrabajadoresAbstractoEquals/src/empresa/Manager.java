@@ -20,4 +20,22 @@ public class Manager extends Empleado {
 		// TODO Auto-generated constructor stub
 	}
 
+	@Override
+	public String toString() {
+		return super.toString() + " bonus memsual: " + this.bonus;
+	}
+	
+	public double monthlyPayment() {
+		return super.monthlyPaynent()+bonus;
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		if (!(obj instanceof Manager))
+		{
+			return false;
+		}
+		Manager manager = (Manager)obj;
+		return this.bonus == manager.bonus && super.equals(manager);
+	}
 }

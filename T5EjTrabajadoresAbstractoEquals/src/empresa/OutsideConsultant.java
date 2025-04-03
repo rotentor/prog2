@@ -24,5 +24,17 @@ public class OutsideConsultant extends Worker {
 		this.horas=horas;
 		this.empresa=empresa;
 	}
+	
+	@Override
+	public String toString() {
+		return super.toString() + "  Tarifa del autónomo: " + tarifa + "  Horas mensuales: " + horas + " Empresa en la que trabaja: " + empresa;
+	}
+	
+
+
+	@Override
+	public double monthlyPaynent() {
+		return tarifa*horas;
+	}
 
 }

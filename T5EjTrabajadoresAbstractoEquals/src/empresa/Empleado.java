@@ -16,5 +16,25 @@ public class Empleado extends Worker {
 		this.salario=salario;
 		
 	}
+	
+	@Override
+	public String toString() {
+		return super.toString() + " Salario anual: " + this.salario;
+	}
 
+	@Override
+	public double monthlyPaynent() {
+		
+		return this.salario/14;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		Empleado empleado;
+		if(!(obj instanceof Empleado)) {
+			return false;
+		}
+		empleado = (Empleado)obj;
+		return super.equals(empleado) && empleado.salario==salario;
+	}
 }
