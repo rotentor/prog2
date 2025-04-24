@@ -7,7 +7,7 @@ public class Empleado extends Worker {
 	
 	private double salario; //Salario anual del Empleado
 	private static double SMI = 11800;
-	public final static int EDAD_MINIMA = 16;
+	
 	
 	/**
 	 * PRE: edad >=0,salario >= SMI

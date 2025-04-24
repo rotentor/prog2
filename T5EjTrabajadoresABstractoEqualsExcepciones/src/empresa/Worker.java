@@ -5,9 +5,10 @@ import persona.Persona;
 
 public abstract class Worker extends Persona {
 	private String noSS; // número de la seguridad social
+	public final static int EDAD_MINIMA = 16;
 	
 	/*
-	 * Pre: edad >= 0
+	 * Pre: edad >= EDAD_MINIMA
 	 * Constructor de la clase Worker
 	 */
 	public Worker(String nombre, int edad, String noSS) throws ErrorEdadInvalida {

@@ -6,7 +6,7 @@ public class OutsideConsultant extends Worker {
 	private double horas;
 	private String empresa;
 	
-	//Pre: edad>=0, tarifa>=0, horas>=0
+	//Pre: edad >= EDAD_MINIMA, tarifa>=0, horas>=0
 	/**
 	 * 
 	 * @param nombre

@@ -5,7 +5,7 @@ public class Manager extends Empleado {
 	private double bonus;//bonus mensual
 	
 	/**
-	 * PRE: edad>=0 , salario>=s.m.i , bonus>=100
+	 * PRE: >= EDAD_MINIMA , salario>=s.m.i , bonus>=100
 	 * @param nombre
 	 * @param edad
 	 * @param noSS

@@ -114,10 +114,4 @@ public class PruebaTrabajadores {
 		System.out.println("El coste total es de: " + costeTotal + "€");
 	}
 	
-/*	public static void main(String[] args) {
-		Scanner lector = new Scanner(System.in);
-		Empleado empleado =  PruebaTrabajadores.leerEmpelado(lector);
-		System.out.println("Empleado leido: " + empleado);
-		
-	}*/
 }
