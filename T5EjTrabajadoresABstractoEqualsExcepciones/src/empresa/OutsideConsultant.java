@@ -1,5 +1,8 @@
 package empresa;
 
+import excepcion.ErrorDatoInvalido;
+import excepcion.ErrorEdadInvalida;
+
 public class OutsideConsultant extends Worker {
 
 	private double tarifa;
@@ -15,12 +18,15 @@ public class OutsideConsultant extends Worker {
 	 * @param tarifa
 	 * @param horas
 	 * @param empresa
+	 * @throws ErrorEdadInvalida 
+	 * @throws ErrorDatoInvalido 
 	 */
 	public OutsideConsultant(String nombre, int edad, String noSS, double tarifa,
-			double horas, String empresa) {
+			double horas, String empresa) throws ErrorEdadInvalida,
+			ErrorDatoInvalido {
 		super(nombre, edad, noSS);
-		this.tarifa=tarifa;
-		this.horas=horas;
+		this.setHoras(horas);
+		this.setTarifa(tarifa);
 		this.empresa=empresa;
 	}
 	
@@ -34,6 +40,20 @@ public class OutsideConsultant extends Worker {
 	@Override
 	public double monthlyPaynent() {
 		return tarifa*horas;
+	}
+	
+	public void setTarifa(double tarifa) throws ErrorDatoInvalido {
+		if (tarifa < 0) {
+			throw new ErrorDatoInvalido("La tarifa debe ser mayor o igual que cero");
+		}
+		this.tarifa = tarifa;
+	}
+	
+	public void setHoras(double horas) throws ErrorDatoInvalido {
+		if (horas < 0) {
+			throw new ErrorDatoInvalido("Las horas deben ser mayor o igual que cero");
+		}
+		this.horas = horas;
 	}
 
 }

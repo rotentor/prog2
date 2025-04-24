@@ -13,6 +13,7 @@ public abstract class Worker extends Persona {
 	 */
 	public Worker(String nombre, int edad, String noSS) throws ErrorEdadInvalida {
 		super(nombre, edad);
+		this.setEdad(edad);
 		this.noSS = noSS;
 	}
 	
@@ -33,5 +34,14 @@ public abstract class Worker extends Persona {
 		return (super.equals(trabajador)
 				&& trabajador.noSS.equals(noSS));
 		
+	}
+	//sets
+	@Override
+	public void setEdad(int edad) throws ErrorEdadInvalida{
+		if(edad<EDAD_MINIMA) {
+			throw new ErrorEdadInvalida("La edad del trabajador es menor qe la dead minima"
+					+ ", Edad: "+edad+", Edad minima: "+EDAD_MINIMA);
+		}
+		super.setEdad(edad);
 	}
 }
