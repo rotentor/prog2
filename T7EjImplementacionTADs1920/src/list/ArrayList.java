@@ -110,7 +110,7 @@ public class ArrayList<E> implements IList<E> {
     public E get(int index) throws IndexOutOfBoundsException {
         if (index < 0 || index >= size())
             throw new IndexOutOfBoundsException("" + index);
-        return (E) data[index]; 
+        return data[index]; 
     }
 
     /**
@@ -196,11 +196,11 @@ public class ArrayList<E> implements IList<E> {
     public boolean remove(E element) {
         int pos = indexOf(element);
         if (pos == -1)
-            return false;
-        else {
-            this.removeElementAt(pos);
-            return true;
+        {
+           return false;
         }
+        this.removeElementAt(pos);
+        return true;
     }
 
     /**
@@ -213,24 +213,23 @@ public class ArrayList<E> implements IList<E> {
      * 
      */
     public boolean equals(Object obj){
-        if (!(obj instanceof ArrayList<?>))
-            return false;
+    	if (!(obj instanceof ArrayList<?>))
+    		return false;
 
-        ArrayList<?> arr = (ArrayList<?>) obj;
+    	ArrayList<?> arr = (ArrayList<?>) obj;
 
-        if (this.nElems != arr.nElems)
-            return false;
-        else {
-            if (this.nElems == 0) // both are empty
-                return true;
-            Object elem = ((ArrayList<?>) obj).data[0];
-            if (!(this.data[0].getClass().equals(elem.getClass())))
-                return false;
+    	if (this.nElems != arr.nElems)
+    		return false;
 
-            int i;
-            for(i=0; i<nElems && this.data[i].equals(arr.data[i]); i++);
-            return i==nElems;		
-        }
+    	if (this.nElems == 0) // both are empty
+    		return true;
+    	Object elem = ((ArrayList<?>) obj).data[0];
+    	if (!(this.data[0].getClass().equals(elem.getClass())))
+    		return false;
+
+    	int i;
+    	for(i=0; i<nElems && this.data[i].equals(arr.data[i]); i++);
+    	return i==nElems;		
     }
 
     /**
@@ -241,13 +240,13 @@ public class ArrayList<E> implements IList<E> {
      * por comas y saltos de línea.
      */
     public String toString(){
-        if (this.nElems == 0)
-            return "[]";
-        else {
-            String result = "[";
-            for(int i=0; i<nElems-1; i++) result += data[i] + ",\n";
-            return result + data[nElems-1] + "]";
-        }
+    	if (this.nElems == 0)
+    		return "[]";
+
+    	String result = "[";
+    	for(int i=0; i<nElems-1; i++) result += data[i] + ",\n";
+    	return result + data[nElems-1] + "]";
+
     }
 
 
