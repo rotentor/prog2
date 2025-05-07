@@ -23,7 +23,7 @@ import queues.exceptions.EmptyQueueException;
  * respecto a simple.
  */
 public class FirstLastQueue<E> implements IQueue<E> {// ColaPrimeroUltimo
-	private Node<E> head = null;
+	private Node<E> first = null;
 	private Node<E> last = null;
 
 	/** Constructor del cola; Se encarga de realizar la inicialización. */
@@ -126,7 +126,7 @@ public class FirstLastQueue<E> implements IQueue<E> {// ColaPrimeroUltimo
 	 * DONDE N es el número de elementos encolados en la cola de entrada<br>
 	 */
 	public void makeEmpty() {// Vaciar
-		this.head = null; // En java basta con dejar sin referencia un bloque de
+		this.first = null; // En java basta con dejar sin referencia un bloque de
 		// memoria
 		// para que este pueda ser recuperado por el sistema
 		this.last = null;
