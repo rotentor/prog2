@@ -23,9 +23,10 @@ public class ServicioUrgencias {
 	 * Constructor que se encarga de incializar todas las estructuras
 	 */
 	public ServicioUrgencias() {
-		pacientesEsperandoMuyUrgentes = new NaiveQueue<>();
-		pacientesEsperandoUrgentes = new NaiveQueue<>();
-		pacientesAtendidos = new ArrayList<>();
+		pacientesEsperandoMuyUrgentes = new NaiveQueue<Paciente>();
+		pacientesEsperandoUrgentes = new NaiveQueue<Paciente>();
+		pacientesAtendidos = new ArrayList<Paciente>();
+		pacienteEnConsulta = null; // no haría falta
 	}
 	
 	/**
@@ -33,8 +34,10 @@ public class ServicioUrgencias {
 	 * POST: se añade el paciente a la cola asociada a su tipo. Se guarda la referencia
 	 */
 	public void registrarPaciente(Paciente paciente, boolean muyUrgente) {
-		if (muyUrgente) pacientesEsperandoMuyUrgentes.add(paciente);
-		else pacientesEsperandoUrgentes.add(paciente);
+		if (muyUrgente)
+			pacientesEsperandoMuyUrgentes.add(paciente);
+		else
+			pacientesEsperandoUrgentes.add(paciente);
 	}
 	
 	
@@ -45,14 +48,13 @@ public class ServicioUrgencias {
 	 * esperando pasa a la consulta.
 	 */
 	public void llamarPaciente() {
-		if (hayPacienteEsperando() && pacienteEnConsulta == null) {
+		if (hayPacienteEsperando() && pacienteEnConsulta == null){
 			if (pacientesEsperandoMuyUrgentes.isEmpty())
 				pacienteEnConsulta = pacientesEsperandoUrgentes.poll();
 			else
 				pacienteEnConsulta = pacientesEsperandoMuyUrgentes.poll();
 		}
-
-
+		
 	}
 	
 	/**
@@ -85,7 +87,8 @@ public class ServicioUrgencias {
 	 * POST: se indica si hay algún paciente esperando	
 	 */
 	public boolean hayPacienteEsperando() {		
-		return !(pacientesEsperandoUrgentes.isEmpty() && pacientesEsperandoMuyUrgentes.isEmpty());
+		return !pacientesEsperandoUrgentes.isEmpty() || 
+				!pacientesEsperandoMuyUrgentes.isEmpty();
 	}
 	
 	

@@ -35,6 +35,10 @@ public class Cancion {
 		return titulo.equals(cancion.titulo) 
 				&& this.duracion == cancion.duracion;
 	}
+	
+	public boolean equals(Object cancion) {
+			return ((Cancion) cancion).esIgual(this);
+	}
 
 	public int getNoReproducciones() {
 		return noReproducciones;

@@ -1,4 +1,6 @@
 package urgencias;
+import java.time.LocalDate;
+
 import list.ArrayList;
 
 public class Paciente {
@@ -13,7 +15,7 @@ public class Paciente {
 	 */
 	public Paciente(String noSS) {
 		this.noSS = noSS;
-		historial = new ArrayList<>();
+		historial = new ArrayList<Informe>();
 	}
 	
 	/**
@@ -22,9 +24,11 @@ public class Paciente {
 	 * @param informe
 	 */
 	public void guardarInforme(Informe informe) {
-		var fecha = informe.getFecha();
-		for(int i = historial.size(); i > 0 && fecha.compareTo(historial.get(i - 1).getFecha()) < 0; i--)
-			historial.add(i, informe);
+		LocalDate fecha = informe.getFecha();
+		int i;
+		for(i=0; i<historial.size() &&
+				fecha.compareTo(historial.get(i).getFecha()) < 0; i++);
+		historial.add(i, informe);
 	}
 	
 	public String toString() {

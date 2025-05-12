@@ -21,7 +21,8 @@ public class ReproductorMusica {
 			salida += listaReproduccion[i].toString() + ", ";
 
 		salida += "punteroApuntaA=" + 
-				listaReproduccion[punteroReproduccion].toString();
+				(noCanciones==0 ? "nada": 
+					listaReproduccion[punteroReproduccion].toString());
 
 		return salida;
 	}

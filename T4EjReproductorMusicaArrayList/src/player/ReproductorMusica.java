@@ -4,27 +4,22 @@ import player.cancion.Cancion;
 
 public class ReproductorMusica {
 	// contiene las canciones que se pueden reproducir
-	private Cancion[] listaReproduccion;
-	private int noCanciones;
+	private ArrayList<Cancion> listaReproduccion;
+	//private int noCanciones;
 	// indica la pos de la siguiente canci�n a reproducir
 	// si la listaReproduccion est� vac�a, punteroReproduccion es -1
 	private int punteroReproduccion; 
 
-	public ReproductorMusica(int capacidad){
-		listaReproduccion = new Cancion[capacidad];
-		noCanciones = 0;
+	public ReproductorMusica(){
+		listaReproduccion = new ArrayList<Cancion>();
 		punteroReproduccion = -1;
 	}
 
-	public String toString(){	
-		String salida = "";
-		for(int i=0; i < noCanciones; i++)
-			salida += listaReproduccion[i].toString() + ", ";
-
-		salida += "punteroApuntaA=" + 
-				listaReproduccion[punteroReproduccion].toString();
-
-		return salida;
+	public String toString(){
+		return listaReproduccion + "punteroApuntaA=" + 
+				(punteroReproduccion !=-1? 
+						listaReproduccion.get(punteroReproduccion) :
+						"nada");
 	}
 
 	/**
@@ -35,20 +30,8 @@ public class ReproductorMusica {
 	 *
 	 */
 	private int buscarCancion(String titulo, double duracion){	
-		int i;
-		for(i=0;i<noCanciones
-				&& !(listaReproduccion[i].getTitulo().equals(titulo) 
-						&& listaReproduccion[i].getDuracion()==duracion); i++ );
-		if (i==noCanciones) {i=-1;}
-		return i;
-	}
-	
-	private int buscarCancion1(String titulo, double duracion){	
 		Cancion cancion = new Cancion(titulo, duracion);
-		int i;
-		for(i=0;i<noCanciones
-				&& !cancion.esIgual(listaReproduccion[i]); i++ );
-		return (i==noCanciones ? -1 : i);
+		return listaReproduccion.indexOf(cancion);
 	}
 
 	/**
@@ -62,11 +45,9 @@ public class ReproductorMusica {
 	public void borrarCancion(String titulo, double duracion){
 		int posCancion = buscarCancion(titulo, duracion);
 		if(posCancion>=0){
-			for(int i=posCancion+1;i<noCanciones;i++)
-				listaReproduccion[i-1] = listaReproduccion[i];
-			noCanciones--;
-		
-			if(noCanciones>0) punteroReproduccion = 0;
+			listaReproduccion.removeElementAt(posCancion);
+
+			if(listaReproduccion.size()>0) punteroReproduccion = 0;
 			else punteroReproduccion = -1;
 		}
 	}
@@ -80,11 +61,11 @@ public class ReproductorMusica {
 	 */
 	public void insertarCanciones(Cancion[] canciones){
 		if (canciones.length > 0) {
+			this.punteroReproduccion=listaReproduccion.size();
 			for (int i=0; i<canciones.length; i++) {
-				this.listaReproduccion[this.noCanciones+i]=canciones[i];
+				this.listaReproduccion.add(listaReproduccion.size(), 
+						canciones[i]);
 			}
-			this.punteroReproduccion=this.noCanciones;
-			this.noCanciones+=canciones.length;
 		}
 	}
 
@@ -104,7 +85,7 @@ public class ReproductorMusica {
 	 * POST: reproduce la canci�n a la que apunta el puntero
 	 */
 	public void reproducirCancionSeleccionada(){
-		listaReproduccion[punteroReproduccion].reproducirCancion();
+		listaReproduccion.get(punteroReproduccion).reproducirCancion();
 
 
 	}
@@ -122,7 +103,7 @@ public class ReproductorMusica {
 	 * POST: Indica si el puntero est� en la �ltima canci�n de la lista 
 	 */
 	public boolean haySiguiente(){
-		return punteroReproduccion < noCanciones-1;
+		return punteroReproduccion < listaReproduccion.size()-1;
 	}
 
 	/** 
@@ -131,8 +112,37 @@ public class ReproductorMusica {
 	 * Si no hay ninguna, se devuelve un vector de tama�o cero. 
 	 */
 	public Cancion[] seleccionarCancionesMasEscuchadas(int veces){
+		ArrayList<Cancion> listaMasEscuchadas = new ArrayList<>();
 
-		return null;
+		for(int i=0; i<listaReproduccion.size(); i++) {
+			if(listaReproduccion.get(i).getNoReproducciones()>=veces) {
+				listaMasEscuchadas.add(listaMasEscuchadas.size(), 
+						listaReproduccion.get(i));
+			}			
+		}
+
+		Cancion[] resultado = new Cancion[listaMasEscuchadas.size()];
+
+		for(int i=0;i<listaMasEscuchadas.size();i++) {
+			resultado[i]=new Cancion(listaMasEscuchadas.get(i));
+		}
+
+
+		return resultado;
+	}
+
+	public ArrayList<Cancion> seleccionarCancionesMasEscuchadas1(int veces){
+		ArrayList<Cancion> listaMasEscuchadas = new ArrayList<>();
+
+		for(int i=0; i<listaReproduccion.size(); i++) {
+			if(listaReproduccion.get(i).getNoReproducciones()>=veces) {
+				listaMasEscuchadas.add(listaMasEscuchadas.size(), 
+						new Cancion(listaReproduccion.get(i)));
+			}			
+		}
+
+		return listaMasEscuchadas;	
+
 	}
 
 
