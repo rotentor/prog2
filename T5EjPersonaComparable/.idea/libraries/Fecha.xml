@@ -1,7 +1,7 @@
 <component name="libraryTable">
-  <library name="CorrectorOffline">
+  <library name="Fecha">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../libs/CorrectorOffline.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Fecha.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
